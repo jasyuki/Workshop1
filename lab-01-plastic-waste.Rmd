@@ -22,7 +22,10 @@ plastic_waste <- read_csv("data/plastic-waste.csv")
 *Remove this text, and add your answer for Exercise 1 here.*
 
 ```{r plastic-waste-continent}
-# remove this comment and add the code for Exercise 1 here
+ggplot(data = plastic_waste,
+        mapping = aes(x = plastic_waste_per_cap, fill = continent)) +
+       geom_histogram() +
+         facet_wrap(~ continent)
 ```
 
 ### Exercise 2
